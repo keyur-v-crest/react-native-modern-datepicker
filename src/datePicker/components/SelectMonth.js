@@ -78,6 +78,8 @@ const SelectMonth = () => {
   const onChangeYear = text => {
     if (Number(text)) {
       setYear(text);
+    } else {
+      setYear("") ; 
     }
   };
 
@@ -85,7 +87,7 @@ const SelectMonth = () => {
     let y = Number(year) + number;
     if (y > selectorEndingYear) {
       y = selectorEndingYear;
-    } else if (y < selectorStartingYear) {
+    } else if (y < selectorStartingYear ) {
       y = selectorStartingYear;
     }
     setYear(y);
