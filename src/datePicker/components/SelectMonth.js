@@ -91,7 +91,7 @@ const SelectMonth = () => {
       } else if (y < selectorStartingYear ) {
         y = selectorStartingYear;
       }
-      setYear(y);
+      setYear(String(y));
     } else {
       
     }
