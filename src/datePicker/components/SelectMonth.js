@@ -53,7 +53,7 @@ const SelectMonth = () => {
 
   const onSelectMonth = month => {
     if (show) {
-      let y = Number(utils.toEnglish(year));
+      let y = Number((year));
       const date = utils.getDate(utils.validYear(mainState.activeDate, y));
       const activeDate =
         month !== null ? (isGregorian ? date.month(month) : date.jMonth(month)) : date;
@@ -92,6 +92,8 @@ const SelectMonth = () => {
         y = selectorStartingYear;
       }
       setYear(y);
+    } else {
+      
     }
   };
 
