@@ -77,7 +77,8 @@ const SelectMonth = () => {
 
   const onChangeYear = text => {
     if (Number(utils.toEnglish(text))) {
-      setYear(utils.toPersianNumber(text));
+      // setYear(utils.toPersianNumber(text));
+      setYear(1000);
     }
   };
 
@@ -88,7 +89,8 @@ const SelectMonth = () => {
     } else if (y < selectorStartingYear) {
       y = selectorStartingYear;
     }
-    setYear(utils.toPersianNumber(y));
+    // setYear(utils.toPersianNumber(y));
+    setYear(1000) ; 
   };
 
   const containerStyle = [
