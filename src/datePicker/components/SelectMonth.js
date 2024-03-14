@@ -32,8 +32,8 @@ const SelectMonth = () => {
   const [year, setYear] = useState(utils.getMonthYearText(mainState.activeDate).split(' ')[1]);
   const openAnimation = useRef(new Animated.Value(0)).current;
   const currentMonth = Number(mainState.activeDate.split('/')[1]);
-  const prevDisable = maximumDate && utils.checkYearDisabled(Number(utils.toEnglish(year)), true);
-  const nextDisable = minimumDate && utils.checkYearDisabled(Number(utils.toEnglish(year)), false);
+  const prevDisable = maximumDate && utils.checkYearDisabled(Number(year), true);
+  const nextDisable = minimumDate && utils.checkYearDisabled(Number(year), false);
 
   useEffect(() => {
     mainState.monthOpen && setShow(true);
