@@ -84,13 +84,15 @@ const SelectMonth = () => {
   };
 
   const onSelectYear = number => {
-    let y = Number(year) + number;
-    if (y > selectorEndingYear) {
-      y = selectorEndingYear;
-    } else if (y < selectorStartingYear ) {
-      y = selectorStartingYear;
+    if (year !== ""){
+      let y = Number(year) + number;
+      if (y > selectorEndingYear) {
+        y = selectorEndingYear;
+      } else if (y < selectorStartingYear ) {
+        y = selectorStartingYear;
+      }
+      setYear(y);
     }
-    setYear(y);
   };
 
   const containerStyle = [
