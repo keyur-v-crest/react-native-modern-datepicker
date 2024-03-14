@@ -129,7 +129,7 @@ const SelectMonth = () => {
           value={year}
           onBlur={() => onSelectYear(0)}
           underlineColorAndroid={'rgba(0,0,0,0)'}
-          returnKeyType="done"
+          // returnKeyType="done"
           autoCorrect={false}
           blurOnSubmit
           selectionColor={options.mainColor}
